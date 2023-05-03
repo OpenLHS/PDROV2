@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/PDRO/PDRO-base.owl#"
      xml:base="http://purl.obolibrary.org/obo/PDRO/PDRO-base.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,8 +11,11 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO-base.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/PDRO/releases/2023-05-03/PDRO-base.owl"/>
+        <dc:creator xml:lang="en">Adrien Barton</dc:creator>
+        <dc:creator xml:lang="en">Jean-François Ethier</dc:creator>
+        <dc:creator xml:lang="en">Paul Fabry</dc:creator>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <terms:description>None</terms:description>
+        <terms:description xml:lang="en">An ontology of informational entities about drugs prescriptions, delivery and administration.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title>Prescription DRugs Ontology</terms:title>
         <owl:versionInfo>2023-05-03</owl:versionInfo>
@@ -27,6 +31,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -71,10 +87,98 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PDRO_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000000">
-        <rdfs:label xml:lang="en">root node</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">information that specifies a class of drug product</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug product specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">a temporal characterisation that is about a drug dispensing process</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug dispensing record item dispensing date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000111 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000111">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">information about the quantity of a drug product that was distrubuted during a drug dispensing process</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">dispensed drug quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000112 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000112">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">information that specifies over how much time a dispensed drug quantity should be administered</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug dispensing covered duration specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">information that specifies a sequence of dose administrations</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug dosage specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000114 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">The total amount charged by some provider of goods or services (e.g., hospital, physician pharmacy, dme provider) to payers (insurance companies, the patient)</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug dispensing total charge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000115 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000115">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">The total amount actually paid from all payers for goods or services of the provider</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug dispensing total payment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000116">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">The amount paid by the Payer to a pharmacy for the drug, excluding the amount paid for dispensing the drug. (paid_ingredient_cost contributes to the paid_by_payer field if this field is populated with a nonzero value)</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug dispensing drug product charge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000117 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000117">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115 xml:lang="en">The amount paid by the Payer to a pharmacy for dispensing a drug, excluding the amount paid for the drug ingredient. (paid_dispensing_fee contributes to the paid_by_payer field if this field is populated with a nonzero value)</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug dispensing healthcare provider charge</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
