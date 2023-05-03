@@ -1,0 +1,19 @@
+id: PDRO
+title: Prescription DRugs Ontology
+github_org: OpenLHS
+repo: PDROV2
+documentation:
+  documentation_system: mkdocs
+release_artefacts:
+  - full
+  - base
+primary_release: full
+export_formats:
+  - owl
+  - json
+import_group:
+  products:
+    - id: HOSO
+      module_type: mirror
+      mirror_from: "https://raw.githubusercontent.com/OpenLHS/HOSO/main/HOSO-full.owl"
+robot_java_args: "-Xmx8G"
