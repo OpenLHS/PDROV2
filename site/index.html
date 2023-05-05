@@ -219,9 +219,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         Getting started
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pdro-schema" class="md-nav__link">
+    PDRO schema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -499,6 +537,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pdro-schema" class="md-nav__link">
+    PDRO schema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -519,6 +579,75 @@
 <h1 id="pdro-ontology-documentation">PDRO Ontology Documentation</h1>
 <p>Welcome to the PDRO documentation!</p>
 <p>You can find descriptions of the standard ontology engineering workflows <a href="odk-workflows/">here</a>.</p>
+<h2 id="pdro-schema">PDRO schema</h2>
+<p><a href="#" title="This file is meant to be edited by the ontology maintainer.">//</a>: # <img alt="Screenshot" src="img/HEPRO.png" /></p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th>IRI</th>
+<th>value</th>
+<th>def</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PDRO_0000040</td>
+<td>drug dispensing procedure</td>
+<td>A healthcare procedure in which a specified quantity of a particular drug product is made available with the goal of the drug product being administered to an organism.</td>
+</tr>
+<tr>
+<td>PDRO_0000041</td>
+<td>drug dispensing record item</td>
+<td>A data item that is part of a drug-dispensing record and describes how much of some drug products have been dispensed to a patient.</td>
+</tr>
+<tr>
+<td>PDRO_0000042</td>
+<td>drug dispensing record</td>
+<td>An information content entity that is usually part of a pharmacist information system and includes patient identification as well as drug dispensing record item.</td>
+</tr>
+<tr>
+<td>PDRO_0000109</td>
+<td>drug product characterization</td>
+<td>An information content entity that characterizes a class of drug product.</td>
+</tr>
+<tr>
+<td>PDRO_0000110</td>
+<td>drug dispensing record item dispensing date</td>
+<td>A process temporal characterization that is about a drug dispensing procedure.</td>
+</tr>
+<tr>
+<td>PDRO_0000111</td>
+<td>dispensed drug quantity</td>
+<td>A data item that is about the total quantity of a drug product that was distributed during a drug dispensing procedure.</td>
+</tr>
+<tr>
+<td>PDRO_0000112</td>
+<td>drug dispensing covered duration specification</td>
+<td>A directive information entity that specifies over how much time a dispensed drug quantity should be administered.</td>
+</tr>
+<tr>
+<td>PDRO_0000114</td>
+<td>drug dispensing total charge</td>
+<td>The total amount charged by a healthcare organization to payers to cover a drug dispensing procedure and related drug products.</td>
+</tr>
+<tr>
+<td>PDRO_0000115</td>
+<td>drug dispensing total payment</td>
+<td>The total amount actually paid from all payers to cover a drug dispensing procedure and related drug products.</td>
+</tr>
+<tr>
+<td>PDRO_0000116</td>
+<td>drug dispensing drug product charge</td>
+<td>The amount paid by the payer to a pharmacy for the drug.</td>
+</tr>
+<tr>
+<td>PDRO_0000117</td>
+<td>drug dispensing healthcare provider charge</td>
+<td>The amount paid by the Payer to a pharmacy for dispensing a drug.</td>
+</tr>
+</tbody>
+</table>
 
 
 

@@ -3,6 +3,9 @@
     "id" : "http://purl.obolibrary.org/obo/PDRO/PDRO-base.json",
     "meta" : {
       "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/elements/1.1/contributor",
+        "val" : "Mark McGilchrist"
+      }, {
         "pred" : "http://purl.org/dc/elements/1.1/creator",
         "val" : "Adrien Barton"
       }, {
@@ -19,23 +22,50 @@
         "val" : "An ontology of informational entities about drugs prescriptions, delivery and administration."
       }, {
         "pred" : "http://purl.org/dc/terms/license",
-        "val" : "https://creativecommons.org/licenses/unspecified"
+        "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://purl.org/dc/terms/title",
         "val" : "Prescription DRugs Ontology"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-05-03"
+        "val" : "2023-05-05"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/PDRO/releases/2023-05-03/PDRO-base.json"
+      "version" : "http://purl.obolibrary.org/obo/PDRO/releases/2023-05-05/PDRO-base.json"
     },
     "nodes" : [ {
-      "id" : "http://purl.obolibrary.org/obo/PDRO_0000109",
-      "lbl" : "drug product specification",
+      "id" : "http://purl.obolibrary.org/obo/PDRO_0000040",
+      "lbl" : "drug dispensing procedure",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "information that specifies a class of drug product"
+          "val" : "A healthcare procedure in which a specified quantity of a particular drug product is made available with the goal of the drug product being administered to an organism."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PDRO_0000041",
+      "lbl" : "drug dispensing record item",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A data item that is part of a drug-dispensing record and describes how much of some drug products have been dispensed to a patient."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PDRO_0000042",
+      "lbl" : "drug dispensing record",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity that is usually part of a pharmacist information system and includes patient identification as well as drug dispensing record item."
+        }
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PDRO_0000109",
+      "lbl" : "drug product characterization",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An information content entity that characterizes a class of drug product."
         }
       }
     }, {
@@ -44,7 +74,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "a temporal characterisation that is about a drug dispensing process"
+          "val" : "A process temporal characterization that is about a drug dispensing procedure."
         }
       }
     }, {
@@ -53,7 +83,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "information about the quantity of a drug product that was distrubuted during a drug dispensing process"
+          "val" : "A data item that is about the total quantity of a drug product that was distributed during a drug dispensing procedure."
         }
       }
     }, {
@@ -62,16 +92,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "information that specifies over how much time a dispensed drug quantity should be administered"
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PDRO_0000113",
-      "lbl" : "drug dosage specification",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "information that specifies a sequence of dose administrations"
+          "val" : "A directive information entity that specifies over how much time a dispensed drug quantity should be administered."
         }
       }
     }, {
@@ -80,7 +101,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The total amount charged by some provider of goods or services (e.g., hospital, physician pharmacy, dme provider) to payers (insurance companies, the patient)"
+          "val" : "The total amount charged by a healthcare organization to payers to cover a drug dispensing procedure and related drug products."
         }
       }
     }, {
@@ -89,7 +110,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The total amount actually paid from all payers for goods or services of the provider"
+          "val" : "The total amount actually paid from all payers to cover a drug dispensing procedure and related drug products."
         }
       }
     }, {
@@ -98,8 +119,12 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The amount paid by the Payer to a pharmacy for the drug, excluding the amount paid for dispensing the drug. (paid_ingredient_cost contributes to the paid_by_payer field if this field is populated with a nonzero value)"
-        }
+          "val" : "The amount paid by the payer to a pharmacy for the drug."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "This excludes the amount paid for dispensing the drug product."
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PDRO_0000117",
@@ -107,8 +132,12 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The amount paid by the Payer to a pharmacy for dispensing a drug, excluding the amount paid for the drug ingredient. (paid_dispensing_fee contributes to the paid_by_payer field if this field is populated with a nonzero value)"
-        }
+          "val" : "The amount paid by the Payer to a pharmacy for dispensing a drug."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
+          "val" : "This excludes the amount paid for the drug product."
+        } ]
       }
     }, {
       "id" : "http://purl.org/dc/terms/description",
@@ -124,25 +153,37 @@
       "type" : "PROPERTY"
     } ],
     "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/PDRO_0000040",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/HOSO_0000010"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PDRO_0000041",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PDRO_0000042",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PDRO_0000042",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "obj" : "http://purl.obolibrary.org/obo/PDRO_0000041"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000109",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000110",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+      "obj" : "http://purl.obolibrary.org/obo/NOYO_0000010"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000111",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000112",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PDRO_0000113",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/IAO_0000030"
+      "obj" : "http://purl.obolibrary.org/obo/IAO_0000033"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000114",
       "pred" : "is_a",
