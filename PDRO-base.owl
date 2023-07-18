@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/PDRO/PDRO-base.owl#"
      xml:base="http://purl.obolibrary.org/obo/PDRO/PDRO-base.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/PDRO/releases/2023-05-05/PDRO-base.owl"/>
-        <dc:contributor xml:lang="en">Mark McGilchrist</dc:contributor>
-        <dc:creator xml:lang="en">Adrien Barton</dc:creator>
-        <dc:creator xml:lang="en">Jean-François Ethier</dc:creator>
-        <dc:creator xml:lang="en">Paul Fabry</dc:creator>
-        <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <terms:description xml:lang="en">An ontology of informational entities about drugs prescriptions, delivery and administration.</terms:description>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:title>Prescription DRugs Ontology</terms:title>
-        <owl:versionInfo>2023-05-05</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/PDRO/releases/2023-07-18/PDRO-base.owl"/>
+        <dce:contributor xml:lang="en">Mark McGilchrist</dce:contributor>
+        <dce:creator xml:lang="en">Adrien Barton</dce:creator>
+        <dce:creator xml:lang="en">Jean-François Ethier</dce:creator>
+        <dce:creator xml:lang="en">Paul Fabry</dce:creator>
+        <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
+        <dcterms:description xml:lang="en">An ontology of informational entities about drugs prescriptions, delivery and administration.</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:title>Prescription DRugs Ontology</dcterms:title>
+        <owl:versionInfo>2023-07-18</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -147,15 +147,15 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NOYO_0000010 -->
+    <!-- http://purl.obolibrary.org/obo/IOIO_0000014 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NOYO_0000010"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IOIO_0000014"/>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NOYO_0000024 -->
+    <!-- http://purl.obolibrary.org/obo/OpenLHS-Core_0000031 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NOYO_0000024"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OpenLHS-Core_0000031"/>
     
 
 
@@ -193,7 +193,7 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/NOYO_0000024"/>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/IOIO_0000014"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An information content entity that is usually part of a pharmacist information system and includes patient identification as well as drug dispensing record item.</obo:IAO_0000115>
@@ -215,7 +215,7 @@
     <!-- http://purl.obolibrary.org/obo/PDRO_0000110 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000110">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NOYO_0000010"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OpenLHS-Core_0000031"/>
         <obo:IAO_0000115 xml:lang="en">A process temporal characterization that is about a drug dispensing procedure.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">drug dispensing record item dispensing date</rdfs:label>
     </owl:Class>
