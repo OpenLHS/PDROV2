@@ -28,9 +28,9 @@
         "val" : "Prescription DRugs Ontology"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-05-05"
+        "val" : "2023-07-18"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/PDRO/releases/2023-05-05/PDRO-base.json"
+      "version" : "http://purl.obolibrary.org/obo/PDRO/releases/2023-07-18/PDRO-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PDRO_0000040",
@@ -175,7 +175,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000110",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/NOYO_0000010"
+      "obj" : "http://purl.obolibrary.org/obo/OpenLHS-Core_0000031"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000111",
       "pred" : "is_a",
