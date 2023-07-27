@@ -28,9 +28,9 @@
         "val" : "Prescription DRugs Ontology"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-07-18"
+        "val" : "2023-07-27"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/PDRO/releases/2023-07-18/PDRO-base.json"
+      "version" : "http://purl.obolibrary.org/obo/PDRO/releases/2023-07-27/PDRO-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PDRO_0000040",
@@ -47,7 +47,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A data item that is part of a drug-dispensing record and describes how much of some drug products have been dispensed to a patient."
+          "val" : "A data item that is part of a drug-dispensing record and describes the dispensing process, including how much of some drug products have been dispensed to a patient."
         }
       }
     }, {
@@ -74,7 +74,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A process temporal characterization that is about a drug dispensing procedure."
+          "val" : "A temporal information that is a component of a drug dispensing record item that indicates that the temporal region denoted by this temporal information overlaps with the temporal region occupied by the drug dispensing process described by the drug dispensing record item."
         }
       }
     }, {
@@ -101,7 +101,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The total amount charged by a healthcare organization to payers to cover a drug dispensing procedure and related drug products."
+          "val" : "An information content entity that describes the total amount charged by a healthcare organization to payers to cover a drug dispensing procedure and related drug products."
         }
       }
     }, {
@@ -110,7 +110,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The total amount actually paid from all payers to cover a drug dispensing procedure and related drug products."
+          "val" : "An information content entity that describes the total amount actually paid from all payers to cover a drug dispensing procedure and related drug products."
         }
       }
     }, {
@@ -119,12 +119,9 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The amount paid by the payer to a pharmacy for the drug."
+          "val" : "An information content entity that describes the amount paid by the payer to a pharmacy for the drug."
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "This excludes the amount paid for dispensing the drug product."
-        } ]
+        "comments" : [ "This excludes the amount paid for dispensing the drug product." ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PDRO_0000117",
@@ -132,12 +129,9 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The amount paid by the Payer to a pharmacy for dispensing a drug."
+          "val" : "An information content entity that describes the amount paid by the Payer to a pharmacy for dispensing a drug."
         },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000600",
-          "val" : "This excludes the amount paid for the drug product."
-        } ]
+        "comments" : [ "This excludes the amount paid for the drug product." ]
       }
     }, {
       "id" : "http://purl.org/dc/terms/description",
@@ -175,11 +169,19 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000110",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/OpenLHS-Core_0000031"
+      "obj" : "http://purl.obolibrary.org/obo/OpenLHS-Core_0000065"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PDRO_0000110",
+      "pred" : "http://purl.obolibrary.org/obo/OpenLHS-Core_0000070",
+      "obj" : "http://purl.obolibrary.org/obo/PDRO_0000041"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000111",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PDRO_0000111",
+      "pred" : "http://purl.obolibrary.org/obo/OpenLHS-Core_0000070",
+      "obj" : "http://purl.obolibrary.org/obo/PDRO_0000041"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PDRO_0000112",
       "pred" : "is_a",
